@@ -52,6 +52,16 @@ def my_function():
 print(x)  # Will result in an error because x is not defined globally
 ```
 
+## Documentation & Style
+Here are some documentation and style rules when using functions in your programs:
+
+- Function definitions typically occur the top level of a program. In longer programs, they might be defined before the section of code that exclusively uses them.
+- Functions begin with a [docstring](https://github.com/STE-Technology/ICS3U-Docstrings) comment to clearly define purpose and usage.
+- **Two line spaces** are used *before* and *after* a function definition. This helps clearly define logical paragraphs, i.e., what is part of the function, and what is not.
+
+## Docstrings
+Docstrings, short for *documentation strings*, are a specific type of comment that is used to describe Python functions, methods, and modules. Follow [this](https://github.com/STE-Technology/ICS3U-Docstrings) guide on how to write proper docstrings.
+
 <br><br><br>
 
 # Strings
