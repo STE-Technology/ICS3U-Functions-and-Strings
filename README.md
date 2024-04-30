@@ -26,7 +26,18 @@ greet("Alice")  # Output: Hello, Alice
 ## Functions with Return Values
 Functions can also return values using the `return` keyword. This allows the function to send data back to the caller. 
 
-Example:
+Example, above `greet()` function returning a string:
+
+```python
+def greet(name):
+    return "Hello, " + name
+
+
+# Calling the function, passing "Alice" as an argument
+print(greet("Alice"))  # Output: Hello, Alice
+```
+
+A different example, returning an integer:
 
 ```python
 def add(a, b):
