@@ -54,94 +54,6 @@ print(x)  # Will result in an error because x is not defined globally
 
 <br><br><br>
 
-# Exceptions
-We can use `try` and `except` blocks are used for error handling. Here's a summary of how to use them:
-
-### `Try` Block
-The code that you think might raise an exception is placed inside the `try` block.
-```python
-try:
-    # Code that might raise an exception
-    # ...
-```
-
-### `Except` Block
-If an exception occurs in the `try` block, the control immediately passes to the `except` block. Here, you can handle the exception or take appropriate action.
-```python
-except ExceptionType:
-    # Code to handle the exception
-    # ...
-```
-
-`ExceptionType` specifies the type of exception you want to catch. You can be specific (e.g., `ValueError`, `TypeError`) or use a more general `Exception` to catch any type of exception.
-
-### Optional `Else` Block
-You can include an else block after the except block, which will only execute if no exception occurs in the try block.
-```python
-else:
-    # Code to execute if no exception occurs
-    # ...
-```
-
-### Optional `Finally` Block
-This block is always executed whether an exception occurred or not. It's useful for releasing external resources (like files or network connections) regardless of whether the code in the try block succeeded or not.
-```python
-finally:
-    # Code to execute whether there is an exception or not
-    # ...
-```
-
-### Examples
-Here are simple examples of how an exception might be handled. 
-
-This example catches all errors with `try` and `except`:
-
-```python
-try:
-    number = int(input("Enter an integer: "))  # int() only works with integers
-except:
-    print("Error. Enter a valid integer.")  # Error for all non-integers
-```
-
-This example displays different errors depending on the exception (`ValueError` and `ZeroDivisionError`):
-
-```python
-try:
-    x = int(input("Enter a number: "))  # This might generate an error for int()
-    result = 10 / x  # This line might generate an error for 0
-    print("Result: ", result)
-except ValueError:  # Exception when user enters a non-integer
-    print("Please enter a valid number.")
-except ZeroDivisionError:  # Exception when user enters a zero
-    print("Cannot divide by zero.")
-```
-
-This is a complete example showing the usage of optional `else` and `finally` structures:
-
-```python
-try:
-    x = int(input("Enter a number: "))
-    result = 10 / x
-    print("Result:", result)
-except ValueError:
-    print("Please enter a valid number.")
-except ZeroDivisionError:
-    print("Cannot divide by zero.")
-else:
-    print("No exceptions occurred.")
-finally:
-    print("This will always execute.")
-```
-
-In above example:
-
-- If the user enters a non-integer value, a `ValueError` will occur, and the corresponding message will be printed.
-- If the user enters `0`, a `ZeroDivisionError` will occur, and the corresponding message will be printed.
-- If the user enters any other number, the result will be printed along with the message saying no exceptions occurred.
-- Finally, the message in the finally block will always be printed.
-
-<br><br><br>
-
 # Strings
 Strings are sequences of characters. They can be indexed, sliced, and manipulated in various ways.
 
@@ -260,3 +172,92 @@ print(my_string.strip())         # Output: 'Python'
 print(my_string.upper())         # Output: '   PYTHON   '
 print(my_string.find('th'))      # Output: 2
 ```
+
+<br><br><br>
+
+# Exceptions
+We can use `try` and `except` blocks are used for error handling. Here's a summary of how to use them:
+
+### `Try` Block
+The code that you think might raise an exception is placed inside the `try` block.
+```python
+try:
+    # Code that might raise an exception
+    # ...
+```
+
+### `Except` Block
+If an exception occurs in the `try` block, the control immediately passes to the `except` block. Here, you can handle the exception or take appropriate action.
+```python
+except ExceptionType:
+    # Code to handle the exception
+    # ...
+```
+
+`ExceptionType` specifies the type of exception you want to catch. You can be specific (e.g., `ValueError`, `TypeError`) or use a more general `Exception` to catch any type of exception.
+
+### Optional `Else` Block
+You can include an else block after the except block, which will only execute if no exception occurs in the try block.
+```python
+else:
+    # Code to execute if no exception occurs
+    # ...
+```
+
+### Optional `Finally` Block
+This block is always executed whether an exception occurred or not. It's useful for releasing external resources (like files or network connections) regardless of whether the code in the try block succeeded or not.
+```python
+finally:
+    # Code to execute whether there is an exception or not
+    # ...
+```
+
+### Examples
+Here are simple examples of how an exception might be handled. 
+
+This example catches all errors with `try` and `except`:
+
+```python
+try:
+    number = int(input("Enter an integer: "))  # int() only works with integers
+except:
+    print("Error. Enter a valid integer.")  # Error for all non-integers
+```
+
+This example displays different errors depending on the exception (`ValueError` and `ZeroDivisionError`):
+
+```python
+try:
+    x = int(input("Enter a number: "))  # This might generate an error for int()
+    result = 10 / x  # This line might generate an error for 0
+    print("Result: ", result)
+except ValueError:  # Exception when user enters a non-integer
+    print("Please enter a valid number.")
+except ZeroDivisionError:  # Exception when user enters a zero
+    print("Cannot divide by zero.")
+```
+
+This is a complete example showing the usage of optional `else` and `finally` structures:
+
+```python
+try:
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+except ValueError:
+    print("Please enter a valid number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print("No exceptions occurred.")
+finally:
+    print("This will always execute.")
+```
+
+In above example:
+
+- If the user enters a non-integer value, a `ValueError` will occur, and the corresponding message will be printed.
+- If the user enters `0`, a `ZeroDivisionError` will occur, and the corresponding message will be printed.
+- If the user enters any other number, the result will be printed along with the message saying no exceptions occurred.
+- Finally, the message in the finally block will always be printed.
+
